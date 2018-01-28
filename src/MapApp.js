@@ -21,6 +21,9 @@ export class MapApp extends React.Component {
   render() {
     return (
       <div>
+        <div className="title-bar">
+          <span className="title-bar-title">Bypass Visualizer</span>
+        </div>
         <Controls flow={this.state.flow} bypass={this.state.bypass} update={this.update} />
         <Map flow={this.state.flow} bypass={this.state.bypass} />
       </div>
