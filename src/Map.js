@@ -1,6 +1,6 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
-import vantaanjoki from './vantaanjoki.json';
+import vantaanjoki from './kirkonkyla.json';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidmFudGFhbmpva2VsYWlzZXQiLCJhIjoiY2pjeDNtbDlpM3JlajMzbjB5c2ticjV3NSJ9.yFNcknbxPC9Ny786LkZECg';
 const voimala_coordinates = [24.77539, 60.38459];
