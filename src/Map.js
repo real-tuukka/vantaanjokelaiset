@@ -111,27 +111,22 @@ export class Map extends React.Component {
           'circle-color': [
             "interpolate",
             ["linear"],
-            ["get", "concentration"],
+            ["get", "concent"],
             0, "rgb(28, 224, 242)",
-            0.5, "rgb(102, 102, 255)",
-            1, "rgb(102, 0, 255)",
-            2, "rgb(153, 0, 204)",
-            3, "rgb(153, 0, 153)",
-            4, "rgb(153, 51, 102)",
+            1, "rgb(153, 0, 204)",
+            2, "rgb(153, 51, 102)",
             5, "rgb(153, 0, 51)",
             10, "rgb(255,0,0)",
           ],
           "circle-opacity": [
             "interpolate",
             ["linear"],
-            ["get", "concentration"],
+            ["get", "concent"],
             0, 0,
-            0.5, 0.05,
-            1, 0.1,
-            2, 0.2,
-            3, 0.3,
-            4, 0.4,
-            5, 0.5,
+            0.5, 0.1,
+            1, 0.3,
+            2, 0.6,
+            5, 0.8,
             10, 1,
           ],
           "circle-radius": [
@@ -184,7 +179,7 @@ export class Map extends React.Component {
         else {
           bypassed_water = 0;
         }
-        point.properties.concentration = bypassed_water / point.properties.virtaama2;
+        point.properties.concent = bypassed_water / point.properties.virtaama;
       });
       this.forceUpdate();
     });

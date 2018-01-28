@@ -134,3 +134,23 @@
 
 .mapboxgl-popup-content {
 }
+
+.title-bar {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #444443;
+  height: 5%;
+  font-weight: bold;
+  color: white;
+}
+
+.title-bar-title {
+  position: relative;
+  top: 25%;
+}
+
+.description {
+  top: 100%;
+}
