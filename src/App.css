@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -25,4 +24,113 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.controls-label {
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 10px; 
+}
+
+.controls-input {
+  top: 10%;
+}
+
+.controls-field {
+  height: 31px;
+}
+
+.onmap {
+  z-index: 2;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.step {
+  position: absolute;
+  top: 22%;
+  left: 12%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.map {
+  position: absolute;
+  bottom: 0;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 70%;
+}
+.legend {
+  font-size: 12px;
+  position: absolute;
+  width: 260px;
+  bottom: 20px;
+  right: 0;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.legend-title {
+  width: 100%;
+  text-align: center;
+}
+
+.legend-label {
+  position: absolute;
+  bottom: 2px;
+}
+
+.legend-label-low {
+  right: 200px;
+}
+
+.legend-label-high {
+  right: 35px;
+}
+
+.concentration {
+  height: 12px;
+  width: 15%;
+  position: absolute;
+  top: 28px;
+  padding: 0;
+}
+
+.concentration-1 {
+  background-color: rgba(255, 0, 0, 1);
+  left: 12.5%;
+}
+
+.concentration-2 {
+  background-color: rgba(153, 0, 51, 0.8);
+  left: 27.5%;
+}
+
+.concentration-3 {
+  background-color: rgba(153, 0, 153, 0.6);
+  left: 42.5%;
+}
+
+.concentration-4 {
+  background-color: rgba(102, 0, 255, 0.4);
+  left: 57.5%;
+}
+
+.concentration-5 {
+  background-color: rgba(28, 224, 242);
+  left: 72.5%;
+}
+
+.mapboxgl-popup-content {
 }
