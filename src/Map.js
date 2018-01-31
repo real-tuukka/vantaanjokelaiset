@@ -1,10 +1,10 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import vantaanjoki from './kirkonkyla.json';
-import wwtpicon from './wwtpflip.png';
+import wwtpicon from './wwtp.png';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidmFudGFhbmpva2VsYWlzZXQiLCJhIjoiY2pjeDNtbDlpM3JlajMzbjB5c2ticjV3NSJ9.yFNcknbxPC9Ny786LkZECg';
-const voimala_coordinates = [24.77539, 60.38459];
+const voimala_coordinates = [ 24.774500736980102, 60.385511869049438 ];
 const BYPASS_PER_MINUTE = 1;
 let intv;
 
@@ -97,8 +97,7 @@ export class Map extends React.Component {
                 }
             },
             "layout": {
-                "icon-image": "factory",
-                "icon-size": 0.1
+                "icon-image": "factory"
             }
         });
       });
