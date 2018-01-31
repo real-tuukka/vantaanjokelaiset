@@ -1,6 +1,7 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import vantaanjoki from './kirkonkyla.json';
+import wwtpicon from './wwtpflip.png';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidmFudGFhbmpva2VsYWlzZXQiLCJhIjoiY2pjeDNtbDlpM3JlajMzbjB5c2ticjV3NSJ9.yFNcknbxPC9Ny786LkZECg';
 const voimala_coordinates = [24.77539, 60.38459];
@@ -64,7 +65,6 @@ export class Map extends React.Component {
       });
 
       map.on('mouseenter', 'factory', function(e) {
-        console.log(e.features);
         popup.setLngLat(e.features[0].geometry.coordinates)
           .setHTML(e.features[0].properties.name)
           .addTo(map);
@@ -74,7 +74,7 @@ export class Map extends React.Component {
         popup.remove();
       });
 
-      map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Factory.svg/502px-Factory.svg.png', function(error, image) {
+      map.loadImage(wwtpicon, function(error, image) {
         if (error) throw error;
         map.addImage('factory', image);
         map.addLayer({
@@ -113,9 +113,9 @@ export class Map extends React.Component {
             ["linear"],
             ["get", "concent"],
             0, "rgb(28, 224, 242)",
-            1, "rgb(153, 0, 204)",
-            2, "rgb(153, 51, 102)",
-            5, "rgb(153, 0, 51)",
+            0.83, "rgb(102, 0, 255)",
+            0.925, "rgb(153, 51, 102)",
+            0.97, "rgb(153, 0, 51)",
             10, "rgb(255,0,0)",
           ],
           "circle-opacity": [
@@ -123,10 +123,9 @@ export class Map extends React.Component {
             ["linear"],
             ["get", "concent"],
             0, 0,
-            0.5, 0.1,
-            1, 0.3,
-            2, 0.6,
-            5, 0.8,
+            0.83, 0.2,
+            0.925, 0.6,
+            0.97, 0.8,
             10, 1,
           ],
           "circle-radius": [
