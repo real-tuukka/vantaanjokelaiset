@@ -1,10 +1,5 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import DatePicker from 'material-ui/DatePicker';
-import TextField from 'material-ui/TextField';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 
 export class Controls extends React.Component {
   constructor(props) {
@@ -35,11 +30,11 @@ export class Controls extends React.Component {
   render() {
     return (
       <div className="controls controls-input">
-        <label for="flow" className="controls-label">Flow velocity (m/s)</label>
+        <label htmlFor="flow" className="controls-label">Flow velocity (m/s)</label>
         <input type="number" className="controls-field" id="flow" value={this.state.flow} onChange={this.handleFlowChange} />
-        <label for="bypass" className="controls-label">Amount of water to bypass (m3)</label>
+        <label htmlFor="bypass" className="controls-label">Water to bypass (m3)</label>
         <input type="number" className="controls-field" id="bypass" value={this.state.bypass} onChange={this.handleBypassChange} />
-        <FlatButton label="Run Simulation" onClick={this.handleUpdate} backgroundColor='#1ce0f2'/>
+        <FlatButton label="Run" className="controls-field" onClick={this.handleUpdate} backgroundColor='#1ce0f2'/>
       </div>
     );
   }

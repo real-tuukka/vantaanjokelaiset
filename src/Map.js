@@ -16,7 +16,7 @@ export class Map extends React.Component {
       flow: props.flow,
       bypass: props.bypass,
       step: 0,
-      timeString: "Click 'Run Simulation' to start!",
+      timeString: "Click 'Run' to start simulation!",
     }
 
     this.getTimeString = this.getTimeString.bind(this);
@@ -36,6 +36,7 @@ export class Map extends React.Component {
 
   componentDidMount() {
 
+    // Map Setup
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -46,6 +47,9 @@ export class Map extends React.Component {
 
     let map = this.map;
     map.on('load', function() {
+
+      // Map, update data
+
       window.setInterval(function() {
         map.getSource('values').setData({
           "type": "FeatureCollection",
@@ -157,6 +161,11 @@ export class Map extends React.Component {
 
   }
 
+  // - Update values of points on map (color)
+  // - Color is amount of dirty water in comparison to total water amount at that point
+  // - This function does math to determine if there is dirty water in that points area
+  // and updates it's concentration value to represent that dirtiness in map
+
   updateValues() {
     let step = this.state.step + 1;
     let speedCoefficient = this.state.flow / 0.83;
@@ -179,7 +188,6 @@ export class Map extends React.Component {
         }
         point.properties.concent = bypassed_water / point.properties.virtaama;
       });
-      this.forceUpdate();
     });
   }
 
