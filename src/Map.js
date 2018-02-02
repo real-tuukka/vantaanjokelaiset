@@ -116,20 +116,20 @@ export class Map extends React.Component {
             ["linear"],
             ["get", "concent"],
             0, "rgb(28, 224, 242)",
-            0.83, "rgb(102, 0, 255)",
-            0.925, "rgb(153, 51, 102)",
-            0.97, "rgb(153, 0, 51)",
-            10, "rgb(255,0,0)",
+            0.083, "rgb(102, 0, 255)",
+            0.0925, "rgb(153, 51, 102)",
+            0.097, "rgb(153, 0, 51)",
+            1, "rgb(255,0,0)",
           ],
           "circle-opacity": [
             "interpolate",
             ["linear"],
             ["get", "concent"],
             0, 0,
-            0.83, 0.2,
-            0.925, 0.6,
-            0.97, 0.8,
-            10, 1,
+            0.083, 0.2,
+            0.0925, 0.6,
+            0.097, 0.8,
+            1, 1,
           ],
           "circle-radius": [
             "interpolate",
@@ -181,7 +181,7 @@ export class Map extends React.Component {
       vantaanjoki.features.forEach(function(point, i) {
         let bypassed_water;
         if (Math.floor(speedCoefficient * (step - number_of_bypasseds)) <= (i + 1) && (i + 1) <= Math.floor(speedCoefficient * step)) {
-          bypassed_water = 10;
+          bypassed_water = BYPASS_PER_MINUTE;
         }
         else {
           bypassed_water = 0;
