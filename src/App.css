@@ -24,6 +24,19 @@
   width: 15%;
 }
 
+.description {
+  width: 100%;
+  font-size: 12px;
+  position: absolute;
+  bottom: 2%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .onmap {
   z-index: 2;
   font-weight: bold;
