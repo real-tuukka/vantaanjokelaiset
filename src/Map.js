@@ -3,7 +3,7 @@ import mapboxgl from 'mapbox-gl';
 import vantaanjoki from './kirkonkyla.json';
 import wwtpicon from './wwtp.png';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoidmFudGFhbmpva2VsYWlzZXQiLCJhIjoiY2pjeDNtbDlpM3JlajMzbjB5c2ticjV3NSJ9.yFNcknbxPC9Ny786LkZECg';
+mapboxgl.accessToken = 'pk.eyJ1IjoicmVhbHR1dWtrYSIsImEiOiJjbGxsdmNuNTUybHViM2ZtZ2Q3YWtsMWQxIn0.lfinMy_YBLSB8Cs1A0QPTA';
 const voimala_coordinates = [ 24.774500736980102, 60.385511869049438 ];
 const BYPASS_PER_MINUTE = 1;
 let intv;
@@ -40,7 +40,8 @@ export class Map extends React.Component {
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/vantaanjokelaiset/cjcx6chvn0unn2smcb0dbcttv',
+      // style: 'mapbox://styles/vantaanjokelaiset/cjcx6chvn0unn2smcb0dbcttv',
+      style: 'mapbox://styles/mapbox/streets-v10',
       zoom: 8.7,
       center: [24.9539, 60.25459],
     });
